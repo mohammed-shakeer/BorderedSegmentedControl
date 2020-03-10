@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BorderedSegmentedControl_Example' do
+  pod 'BorderedSegmentedControl', :path => '../'
+
+  target 'BorderedSegmentedControl_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
