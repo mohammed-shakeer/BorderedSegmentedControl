@@ -22,7 +22,7 @@ pod 'BorderedSegmentedControl'
 
 ## Author
 
-Mohammed Shakeer, c_mohammed.shakeer@smartdubai.ae
+Mohammed Shakeer, k.mohammed.shakeer@gmail.com
 
 ## License
 
