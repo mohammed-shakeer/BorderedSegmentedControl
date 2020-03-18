@@ -1,0 +1,22 @@
+{
+  "name": "BorderedSegmentedControl",
+  "version": "0.1.0",
+  "summary": "A short description of BorderedSegmentedControl.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Mohammed Shakeer/BorderedSegmentedControl",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Mohammed Shakeer": "c_mohammed.shakeer@smartdubai.ae"
+  },
+  "source": {
+    "git": "https://github.com/Mohammed Shakeer/BorderedSegmentedControl.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "BorderedSegmentedControl/Classes/**/*"
+}

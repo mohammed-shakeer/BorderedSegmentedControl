@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import BorderedSegmentedControl
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        segmentedControl.normalFont =  UIFont.systemFont(ofSize: 17.0)
+        segmentedControl.selectedFont =  UIFont.boldSystemFont(ofSize: 17.0)
     }
 
     override func didReceiveMemoryWarning() {

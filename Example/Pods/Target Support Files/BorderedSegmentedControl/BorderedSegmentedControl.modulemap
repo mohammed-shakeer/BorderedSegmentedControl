@@ -1,0 +1,6 @@
+framework module BorderedSegmentedControl {
+  umbrella header "BorderedSegmentedControl-umbrella.h"
+
+  export *
+  module * { export * }
+}
