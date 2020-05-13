@@ -6,7 +6,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 - iOS Version 11.0 and above
-![](https://github.com/mohammed-shakeer/BorderedSegmentedControl/blob/master/ReferenceImages/Sample.png)
+
+## Screenshot
+
+![Sample screenshot](https://github.com/mohammed-shakeer/BorderedSegmentedControl/blob/master/ReferenceImages/Sample.png)
 
 ## Installation
 
