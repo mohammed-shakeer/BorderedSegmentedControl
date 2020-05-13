@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BorderedSegmentedControl'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'BorderedSegmentedControl is a easy custom Segmented control with a bottom bordered UI that lets you quickly integrate it in your code.'
   s.swift_versions   = '4.0'
 
