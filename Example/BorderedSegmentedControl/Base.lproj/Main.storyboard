@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +20,8 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3eq-Pd-K1O">
-                                <rect key="frame" x="16" y="308.5" width="343" height="51"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="aXT-po-chf"/>
                                 </constraints>
@@ -36,16 +37,42 @@
                                         <color key="value" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionSegmentedControl:" destination="vXZ-lx-hvc" eventType="valueChanged" id="gX0-qg-mJr"/>
+                                </connections>
                             </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPU-nq-Xlj">
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ftb-2m-Osi">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8841037975307322" green="0.8841037975307322" blue="0.8841037975307322" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="Ftb-2m-Osi" firstAttribute="top" secondItem="IPU-nq-Xlj" secondAttribute="top" id="Qap-KG-ulp"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ftb-2m-Osi" secondAttribute="trailing" id="ZLe-Iv-aRk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ftb-2m-Osi" secondAttribute="bottom" id="dGr-6g-8Zf"/>
+                                    <constraint firstItem="Ftb-2m-Osi" firstAttribute="leading" secondItem="IPU-nq-Xlj" secondAttribute="leading" id="uyq-HA-N5p"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3eq-Pd-K1O" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="O2c-GP-9mc"/>
-                            <constraint firstItem="3eq-Pd-K1O" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="xvx-Se-JTn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3eq-Pd-K1O" secondAttribute="trailing" id="yej-fg-t1q"/>
+                            <constraint firstItem="IPU-nq-Xlj" firstAttribute="top" secondItem="3eq-Pd-K1O" secondAttribute="bottom" id="4ed-29-fHP"/>
+                            <constraint firstItem="3eq-Pd-K1O" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="696-dJ-5eT"/>
+                            <constraint firstAttribute="trailing" secondItem="3eq-Pd-K1O" secondAttribute="trailing" id="CyG-9T-tp7"/>
+                            <constraint firstAttribute="trailing" secondItem="IPU-nq-Xlj" secondAttribute="trailing" id="Pu6-6x-XpQ"/>
+                            <constraint firstItem="IPU-nq-Xlj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="eLa-UZ-BIF"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="IPU-nq-Xlj" secondAttribute="bottom" id="gH6-M7-3Bd"/>
+                            <constraint firstItem="3eq-Pd-K1O" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="urb-YW-Nu8"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="labelTitle" destination="Ftb-2m-Osi" id="Ohf-26-UbJ"/>
                         <outlet property="segmentedControl" destination="3eq-Pd-K1O" id="aVO-3U-tC2"/>
                     </connections>
                 </viewController>

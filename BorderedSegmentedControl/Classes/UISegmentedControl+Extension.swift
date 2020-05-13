@@ -65,8 +65,8 @@ public extension UISegmentedControl {
     func setUp<T>(for key: NSAttributedString.Key, value: T, state: UIControl.State) {
 
         // combine old attributes with new attributes to avoid overriding old attributes set
-        var newAttributes: [AnyHashable: Any] = [key: value]
-        if let oldAttributes = titleTextAttributes(for: state) {
+        var newAttributes: [NSAttributedString.Key: Any] = [key: value]
+        if let oldAttributes = titleTextAttributes(for: state) as? [NSAttributedString.Key: Any] {
             newAttributes = oldAttributes + newAttributes
         }
         setTitleTextAttributes(newAttributes, for: state)
