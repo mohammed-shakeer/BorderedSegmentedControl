@@ -44,8 +44,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPU-nq-Xlj">
                                 <rect key="frame" x="0.0" y="50" width="375" height="617"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ftb-2m-Osi">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ftb-2m-Osi">
+                                        <rect key="frame" x="20" y="0.0" width="335" height="617"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -54,9 +54,9 @@
                                 <color key="backgroundColor" red="0.8841037975307322" green="0.8841037975307322" blue="0.8841037975307322" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="Ftb-2m-Osi" firstAttribute="top" secondItem="IPU-nq-Xlj" secondAttribute="top" id="Qap-KG-ulp"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ftb-2m-Osi" secondAttribute="trailing" id="ZLe-Iv-aRk"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ftb-2m-Osi" secondAttribute="trailing" constant="20" id="ZLe-Iv-aRk"/>
                                     <constraint firstAttribute="bottom" secondItem="Ftb-2m-Osi" secondAttribute="bottom" id="dGr-6g-8Zf"/>
-                                    <constraint firstItem="Ftb-2m-Osi" firstAttribute="leading" secondItem="IPU-nq-Xlj" secondAttribute="leading" id="uyq-HA-N5p"/>
+                                    <constraint firstItem="Ftb-2m-Osi" firstAttribute="leading" secondItem="IPU-nq-Xlj" secondAttribute="leading" constant="20" id="uyq-HA-N5p"/>
                                 </constraints>
                             </view>
                         </subviews>
