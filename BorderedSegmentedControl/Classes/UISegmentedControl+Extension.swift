@@ -67,6 +67,11 @@ public extension UISegmentedControl {
         }
     }
 
+    /// redraws layout in passed frame
+    func reloadLayout(in frame: CGRect? = nil) {
+        borderLayer()?.frame = selectedSegmentBottomLayerFrame(segmentFrame: frame)
+    }
+
     /**
      sets up title text attributes for segmented control
      - Parameter key: key to be set in attributes
@@ -115,9 +120,10 @@ public extension UISegmentedControl {
         5
     }
     
-    func selectedSegmentBottomLayerFrame() -> CGRect {
-        
-        let segmentWidth = Int(frame.width)/numberOfSegments
+    func selectedSegmentBottomLayerFrame(segmentFrame: CGRect? = nil) -> CGRect {
+
+        let rect = segmentFrame ?? frame
+        let segmentWidth = Int(rect.width)/numberOfSegments
         var xSpace = segmentWidth*selectedSegmentIndex
         
         if #available(iOS 9.0, *) {
