@@ -55,7 +55,18 @@ public extension UISegmentedControl {
             }
          }
     }
-    
+
+    /// Set layoutDirection to layout the UI properly when device language direction is rightToLeft
+    var layoutDirection: UIUserInterfaceLayoutDirection {
+        get {
+            return UIView.userInterfaceLayoutDirection(for: semanticContentAttribute)
+        }
+        set {
+            semanticContentAttribute = (newValue == .leftToRight) ? .forceLeftToRight : .forceRightToLeft
+            borderLayer()?.frame = selectedSegmentBottomLayerFrame()
+        }
+    }
+
     /**
      sets up title text attributes for segmented control
      - Parameter key: key to be set in attributes
@@ -78,9 +89,11 @@ public extension UISegmentedControl {
      */
     func setupBorder(for color: UIColor) {
                 
-        let bottomBorder = borderLayer() ?? TaggedCALayer()
-        layer.addSublayer(bottomBorder)
-    
+        if borderLayer() == nil {
+            layer.addSublayer(TaggedCALayer())
+        }
+        guard let bottomBorder = borderLayer() else { return }
+        
         bottomBorder.frame = selectedSegmentBottomLayerFrame()
         bottomBorder.backgroundColor = color.cgColor
         tintColor = UIColor.clear
