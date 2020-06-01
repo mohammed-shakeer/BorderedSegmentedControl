@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BorderedSegmentedControl'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'BorderedSegmentedControl is a easy custom Segmented control with a bottom bordered UI that lets you quickly integrate it in your code.'
   s.swift_versions   = '4.0'
 
@@ -26,7 +26,7 @@ BorderedSegmentedControl is a easy custom Segmented control with a bottom border
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Mohammed Shakeer' => 'k.mohammed.shakeer@gmail.com' }
-  s.source           = { :git => 'https://github.com/Mohammed-Shakeer/BorderedSegmentedControl.git', :tag => '0.1.2' }
+  s.source           = { :git => 'https://github.com/Mohammed-Shakeer/BorderedSegmentedControl.git', :tag => '0.1.3' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
