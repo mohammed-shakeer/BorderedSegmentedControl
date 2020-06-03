@@ -82,7 +82,7 @@ public extension UISegmentedControl {
 
         // combine old attributes with new attributes to avoid overriding old attributes set
         var newAttributes: [NSAttributedString.Key: Any] = [key: value]
-        if let oldAttributes = titleTextAttributes(for: state) as? [NSAttributedString.Key: Any] {
+        if let oldAttributes = titleTextAttributes(for: state) {
             newAttributes = oldAttributes + newAttributes
         }
         setTitleTextAttributes(newAttributes, for: state)
