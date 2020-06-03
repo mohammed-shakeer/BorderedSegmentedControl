@@ -170,7 +170,7 @@ extension UIImage {
         ctx.fill(CGRect(origin: .zero, size: size))
         guard
             let image = UIGraphicsGetImageFromCurrentImageContext(),
-            let imagePNGData = UIImagePNGRepresentation(image)
+            let imagePNGData = image.pngData()
             else { return nil }
         UIGraphicsEndImageContext()
         self.init(data: imagePNGData)
