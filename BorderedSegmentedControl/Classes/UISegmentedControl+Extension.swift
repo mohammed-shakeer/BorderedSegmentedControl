@@ -134,6 +134,20 @@ public extension UISegmentedControl {
 
         return CGRect(x: xSpace, y: Int(bounds.height) - borderLayerHeight, width: segmentWidth, height: borderLayerHeight)
     }
+    
+    func setSegmentBackgroundColor(_ color: UIColor) {
+      if #available(iOS 13, *) {
+          let backGroundImage = UIImage(color: .clear, size: CGSize(width: 1, height: 32))
+          let dividerImage = UIImage(color: color, size: CGSize(width: 1, height: 32))
+
+          setBackgroundImage(backGroundImage, for: .normal, barMetrics: .default)
+          setBackgroundImage(dividerImage, for: .selected, barMetrics: .default)
+
+          setDividerImage(dividerImage,
+                          forLeftSegmentState: .normal,
+                          rightSegmentState: .normal, barMetrics: .default)
+      }
+    }
 }
 
 class TaggedCALayer: CALayer { }
@@ -145,4 +159,21 @@ extension Dictionary {
         rhs.forEach { result[$0] = $1 }
         return result
     }
+}
+
+extension UIImage {
+
+    convenience init?(color: UIColor, size: CGSize) {
+        UIGraphicsBeginImageContextWithOptions(size, false, 1)
+        color.set()
+        guard let ctx = UIGraphicsGetCurrentContext() else { return nil }
+        ctx.fill(CGRect(origin: .zero, size: size))
+        guard
+            let image = UIGraphicsGetImageFromCurrentImageContext(),
+            let imagePNGData = UIImagePNGRepresentation(image)
+            else { return nil }
+        UIGraphicsEndImageContext()
+        self.init(data: imagePNGData)
+    }
+
 }

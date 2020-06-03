@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         segmentedControl.selectedFont =  UIFont.boldSystemFont(ofSize: 17.0)
         segmentedControl.normalColor =  UIColor.lightGray
         segmentedControl.selectedColor =  UIColor.purple
+        segmentedControl.setSegmentBackgroundColor(UIColor.white)
         displayTitle()
     }
 
