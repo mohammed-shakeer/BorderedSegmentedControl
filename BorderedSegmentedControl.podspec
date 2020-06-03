@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.name             = 'BorderedSegmentedControl'
   s.version          = '0.1.6'
   s.summary          = 'BorderedSegmentedControl is a easy custom Segmented control with a bottom bordered UI that lets you quickly integrate it in your code.'
-  s.swift_versions   = '4.0'
+  s.swift_versions   = '4.2'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
